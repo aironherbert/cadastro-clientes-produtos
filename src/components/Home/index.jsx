@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom'
 import { Button, Container } from '@material-ui/core';
 import './index.css'
 
-export default function index() {
+export default function Home() {
     const history = useHistory();
     return (
         <div className="container">
