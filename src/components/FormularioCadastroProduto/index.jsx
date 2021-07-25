@@ -9,7 +9,7 @@ export default function FormularioCadastroProduto() {
     const history = useHistory();
 
     function aoEnviar(dados) {
-        let produtos = new Array();
+        let produtos = [];
         if (JSON.parse(localStorage.getItem('@produtos')) !== null){
             produtos=JSON.parse(localStorage.getItem('@produtos'));
         }

@@ -14,7 +14,7 @@ export default function FormularioCadastroCliente() {
     const history = useHistory();
 
     function aoEnviar(dados) {
-        let clientes = new Array();
+        let clientes = [];
         if (JSON.parse(localStorage.getItem('@clientes')) !== null){
             clientes=JSON.parse(localStorage.getItem('@clientes'));
         }
@@ -49,7 +49,7 @@ export default function FormularioCadastroCliente() {
             </Typography>
             <form onSubmit={(event) => {
                 event.preventDefault();
-                aoEnviar({ nome, sobrenome, cpf, promocoes, novidades })
+                aoEnviar({ nome, sobrenome, endereco, cpf, promocoes, novidades })
             }}>
                 <TextField id="nome" label="Nome" variant="outlined" fullWidth margin="normal"
                     onChange={event => { setNome(event.target.value) }} value={nome} />
@@ -58,7 +58,7 @@ export default function FormularioCadastroCliente() {
                     onChange={event => { setSobrenome(event.target.value) }} value={sobrenome} />
                 
                 <TextField id="endereco" label="Endereço" variant="outlined" fullWidth margin="normal"
-                    onChange={event => { setSobrenome(event.target.value) }} value={endereco} />
+                    onChange={event => { setEndereco(event.target.value) }} value={endereco} />
 
                 <TextField id="cpf" label="CPF" variant="outlined" fullWidth margin="normal" error={!erros.cpf.valido} helperText={erros.cpf.texto}
                     onBlur={(event) => {
