@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react';
 import { Button, TextField, Typography } from "@material-ui/core";
 import { useHistory } from 'react-router-dom';
 
-export default function FormularioCadastroProduto({ aoEnviar, validarCPF }) {
+export default function FormularioCadastroProduto() {
     const [nome, setNome] = useState("");
     const [descricao, setDescricao] = useState("");
     const [preco, setPreco] = useState("");

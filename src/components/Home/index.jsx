@@ -9,7 +9,7 @@ export default function index() {
         <div className="container">
             <Container maxWidth="sm" style={{display: 'flex', justifyContent: 'center'}}>
                 <Button variant='contained' color='primary' onClick={() => history.push('./clientes')} >Clientes</Button>
-                <Button variant='contained' color='secundary' onClick={() => history.push('./produtos')} >Produtos</Button>
+                <Button variant='contained' color='secondary' onClick={() => history.push('./produtos')} >Produtos</Button>
             </Container>
         </div>
     )
